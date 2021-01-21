@@ -23,5 +23,11 @@ module SimpleCheckout
         expect(@item.price).to eq 200
       end
     end
+
+    context '#show_price' do
+      it 'returns correct price format' do
+        expect(@item.show_price).to eq '£2.00'
+      end
+    end
   end
 end

@@ -29,7 +29,7 @@ module SimpleCheckout
       let (:test_basket) { [milk, bread, steak] }
       it 'returns the price of the scanned item' do
         checkout = Checkout.new(test_basket)
-        expect(checkout.scan('milk')).to eq milk.price
+        expect(checkout.scan('milk')).to eq milk.show_price
       end
 
       it 'increments the total price with the price of each scanned item' do

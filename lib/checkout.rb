@@ -10,7 +10,7 @@ module SimpleCheckout
       item_index = find_item_index(item_name)
       price = basket[item_index].price
       @total += price
-      price
+      price.money_format
     end
 
     def remove_scanned_item(item_name)

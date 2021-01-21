@@ -5,5 +5,9 @@ module SimpleCheckout
       @name = args.fetch(:name)
       @price = args.fetch(:price)
     end
+
+    def show_price
+      price.money_format
+    end
   end
 end
