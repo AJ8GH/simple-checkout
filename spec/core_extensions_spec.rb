@@ -1,6 +1,6 @@
 describe Integer do
   context '#money_format' do
-    it 'converts money to £xx.xx' do
+    it 'converts pennies to £xx.xx' do
       expect(200.money_format).to eq '£2.00'
       expect(3.money_format).to eq '£0.03'
       expect(30.money_format).to eq '£0.30'
