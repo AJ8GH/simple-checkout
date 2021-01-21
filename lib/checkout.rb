@@ -5,8 +5,9 @@ module SimpleCheckout
       @basket = basket
     end
 
-    def scan(basket)
-      basket.map(&:price)
+    def scan(item_name)
+      item_index = basket.find_index { |item| item.name == item_name }
+      price = basket[item_index].price
     end
   end
 end
