@@ -10,9 +10,4 @@ module SimpleCheckout
     chicken:    500,
     salmon:     600
   }
-
-  def get_price(item_name)
-    item = item_name.split.join('_').to_sym
-    price = INVENTORY[item]
-  end
 end
