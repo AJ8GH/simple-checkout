@@ -3,25 +3,28 @@
 ## Design Plan
 
 #### item
-- attributes:
+- attributes: (hash)
   - price
   - name
 
 #### checkout
 - attributes:
-  - basket
+  - basket (array of item objects)
 - methods:
-  - scan
-  - total
-  - format
+  - scan (takes item as argument and returns price)
+  - remove_scanned_item (removes scanned item from basket)
+  - total (increments the total cost of the shop with price of each scanned item)
 
 #### shopper
 - attributes:
-  - basket
+  - basket (array of item objects)
 - methods:
-  - pick
-  - buy
+  - pick (takes an item argument and adds it to basket)
+  - checkout (initializes a new Checkout object and passes shopper's basket as the basket argument)
 
+#### core_extensions
+- numeric
+  - format (puts the price into £xx.xx format)
 
 ### To achieve these goals:
 
