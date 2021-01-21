@@ -1,5 +1,7 @@
 # Project: Simple Checkout
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/d6a8eadadcdb4b40d2c8/maintainability)](https://codeclimate.com/github/AJ8GH/simple-checkout/maintainability)  [![Coverage Status](https://coveralls.io/repos/github/AJ8GH/simple-checkout/badge.svg?branch=master)](https://coveralls.io/github/AJ8GH/simple-checkout?branch=master) [![Build Status](https://travis-ci.com/AJ8GH/simple-checkout.svg?branch=master)](https://travis-ci.com/AJ8GH/simple-checkout)
+
 Build a simple supermarket checkout app using object oriented design principle and test driven development.
 
 ### To achieve these goals:
