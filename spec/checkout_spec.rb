@@ -1,8 +1,8 @@
 module SimpleCheckout
   describe Checkout do
-    let(:example_basket) do
-      [{name: 'Milk', price: 50}, {name: 'Bread', price: 100}, {name: 'Steak', price: 18_000}]
-    end
+    let(:milk) { Item.new(name: 'Milk', price: 50) }
+    let(:bread) { Item.new(name: 'Bread', price: 100) }
+    let(:steak) { Item.new(name: 'Steak', price: 1800) }
 
     context '#initialize' do
       it 'takes an argument' do
@@ -15,9 +15,18 @@ module SimpleCheckout
     end
 
     context '#basket' do
-      before(:each) { @checkout = Checkout.new(example_basket) }
+      let (:test_basket) { [milk, bread, steak] }
       it 'returns the items in the basket' do
-        expect(@checkout.basket).to eq example_basket
+        checkout = Checkout.new(test_basket)
+        expect(checkout.basket).to eq test_basket
+      end
+    end
+
+    context '#scan' do
+      let (:test_basket) { [milk, bread, steak] }
+      it 'returns the price of the scanned items' do
+        checkout = Checkout.new(test_basket)
+        expect(checkout.scan(checkout.basket)).to eq [milk.price, bread.price, steak.price]
       end
     end
   end

@@ -4,5 +4,9 @@ module SimpleCheckout
     def initialize(basket)
       @basket = basket
     end
+
+    def scan(basket)
+      basket.map(&:price)
+    end
   end
 end
