@@ -1,13 +1,16 @@
 module SimpleCheckout
   class Checkout
-    attr_accessor :basket
-    def initialize(basket)
+    attr_accessor :basket, :total
+    def initialize(basket, total = 0)
       @basket = basket
+      @total = total
     end
 
     def scan(item_name)
       item_index = find_item_index(item_name)
       price = basket[item_index].price
+      @total += price
+      price
     end
 
     def remove_scanned_item(item_name)
