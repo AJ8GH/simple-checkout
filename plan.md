@@ -1,5 +1,16 @@
 # Project: Simple Checkout
 
+## Plan
+- item
+  - price, name
+- checkout
+  - scan
+  - total
+  - format
+- shopper
+  - pick, buy
+
+
 ### To achieve these goals:
 
 - "I know how my language works"
