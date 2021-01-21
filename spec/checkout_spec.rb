@@ -50,6 +50,12 @@ module SimpleCheckout
       end
     end
 
-    context 'find_item_index'
+    context '#find_item_index' do
+      let (:multiples_basket) { [milk, cheese, more_milk, ice_cream]}
+      it 'returns the index of the first item in the basket with the specified name' do
+        checkout = Checkout.new(multiples_basket)
+        expect(checkout.find_item_index('milk')).to eq 0
+      end
+    end
   end
 end

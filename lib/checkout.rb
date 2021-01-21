@@ -13,5 +13,9 @@ module SimpleCheckout
     def remove_scanned_item(item_name)
       basket.delete_at(basket.find_index { |item| item.name == item_name })
     end
+
+    def find_item_index(item_name)
+      basket.find_index { |item| item.name == item_name }
+    end
   end
 end
