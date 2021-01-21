@@ -1,6 +1,6 @@
 # Project: Simple Checkout
 
-Build a simple supermarket checkout app using object oriented design principle and test driven development
+Build a simple supermarket checkout app using object oriented design principle and test driven development.
 
 ### To achieve these goals:
 - "I know how my language works"
