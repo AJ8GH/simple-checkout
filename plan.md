@@ -1,14 +1,26 @@
 # Project: Simple Checkout
 
-## Plan
-- item
-  - price, name
-- checkout
+## Design Plan
+
+#### item
+- attributes:
+  - price
+  - name
+
+#### checkout
+- attributes:
+  - basket
+- methods:
   - scan
   - total
   - format
-- shopper
-  - pick, buy
+
+#### shopper
+- attributes:
+  - basket
+- methods:
+  - pick
+  - buy
 
 
 ### To achieve these goals:
