@@ -16,5 +16,12 @@ module SimpleCheckout
         expect(@shopper.basket).to eq []
       end
     end
+
+    context '#pick_item' do
+      it 'adds an instance of the item to basket' do
+        @shopper.pick_item('milk')
+        expect(@shopper.basket.first.name).to eq 'milk'
+      end
+    end
   end
 end
