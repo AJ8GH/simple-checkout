@@ -1,5 +1,7 @@
 module SimpleCheckout
   describe Item do
+    before (:all) { @item = Item.new(name: 'Eggs', price: 200 ) }
+
     context '#intialize' do
       it 'raises an exception if an empty hash is provided as an argument' do
         expect { Item.new{} }.to raise_error
@@ -11,9 +13,14 @@ module SimpleCheckout
     end
 
     context '#name' do
-      before (:all) { @item = Item.new(name: 'Eggs', price: 200 ) }
       it 'returns the items name' do
         expect(@item.name).to eq 'Eggs'
+      end
+    end
+
+    context '#price' do
+      it 'returns the price' do
+        expect(@item.price).to eq 200
       end
     end
   end
